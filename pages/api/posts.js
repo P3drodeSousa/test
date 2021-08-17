@@ -25,10 +25,10 @@ export async function getAllPost() {
 export async function getPostBySlug(slug) {
   const fileContent = await import(`../../_posts/${slug}.md`);
 
-  const baseUrl =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : "https://testdfdfdf.vercel.app";
+  const baseUrl ="https://testdfdfdf.vercel.app"
+    // process.env.NODE_ENV === "development"
+    //   ? "http://localhost:3000"
+    //   : "https://testdfdfdf.vercel.app";
 
   const meta = matter(fileContent.default);
   const content = marked(meta.content);
