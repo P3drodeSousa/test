@@ -28,7 +28,7 @@ export async function getPostBySlug(slug) {
   const baseUrl =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://testdfdfdf-8cukv9ahv-p3drodesousa.vercel.app";
+      : "https://testdfdfdf.vercel.app";
 
   const meta = matter(fileContent.default);
   const content = marked(meta.content);
